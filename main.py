@@ -1,3 +1,4 @@
+from generation_passord import GenerationPass
 class Password:
     Login = ""
     Password = ""
