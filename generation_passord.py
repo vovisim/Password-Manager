@@ -1,38 +1,52 @@
 from random import shuffle, choice, randint
 
-numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-alfabet= ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-special_characters = ["#, %, &, !, ?"]
 
-def GenerationPass(passlen=8, dot="True", SpecialCharacters="False"):
-    passlen1 = passlen
-    if SpecialCharacters == False:
-        lenspecial = 0
-        if passlen % 2 != 0:
-            passlen1 -= 1
-    elif passlen % 2 == 0:
-        lenspecial = 2
-        passlen1 -= 2
-    else:
-        lenspecial = 1
-        passlen -= 1
+
+def GenerationPass(passlen=16, dot= True, SpecialCharacters= True):
+    numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    alfabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
+               'v', 'w', 'x', 'y', 'z']
+    special_characters = ["#", "%", "$", "!", "?"]
+
+    passlen1 = 0
     prepass = []
-    for i in passlen1//2:
-        prepass.append(choice(numbers))
-    for i in passlen1//2:
-        prepass.append(choice(alfabet))
+    passs = ""
+
+
     if dot == True:
         prepass.append(".")
-        lenspecial -= 1
+    if SpecialCharacters == True:
+        for i in range(round(passlen / 8)):
+            s = str(choice(special_characters))
+            prepass.append(s)
+    while len(prepass) != passlen:
+        if passlen1 % 2 == 0:
+            prepass.append(choice(numbers))
+        else:
+            n = str(choice(alfabet))
+            if randint(0, 1) == 0:
+                n = n.upper()
+            prepass.append(n)
+        passlen1 +=1
 
-    for i in lenspecial:
-        prepass.append(choice(special_characters))
+    shuffle(prepass)
 
-    if len(prepass) > passlen:
-        prepass.pop
-    return prepass
+    passs ="".join(str(el) for el in prepass)
 
-print(GenerationPass(8, True, False))
+    return passs
+
+
+
+print(GenerationPass())
+
+
+
+
+
+
+
+
+
 
 
 
