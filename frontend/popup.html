@@ -23,8 +23,27 @@
             </div>
         </div>
         <div class="len_dlina">
-            <input type="range" min="8" max="16" id="polzynok" value="8">
+            <input type="range" min="8" max="16" id="fader" value="8" step="1" oninput="outputUpdate(value)">
+            <output for="fader" id="volume">8</output>
         </div>
     </div>
+
+
+
+
+
+
+    <script type="text/javascript">
+        function outputUpdate(vol) {
+            var output = document.querySelector('#volume');
+            output.value = vol;
+            output.style.left = vol - 20 + "px";
+        }
+
+
+    </script>
+
+
+
 </body>
 </html>

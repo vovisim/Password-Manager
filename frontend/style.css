@@ -4,7 +4,7 @@
 body {
     background-color: #c8ece1;
     font-family: 'Roboto', sans-serif;
-    color: 	#6cc6ab;
+    color: #35b18c;
     display: grid;
     grid-template-areas: 
                         "top"
@@ -45,7 +45,7 @@ button {
     text-align: center;
     font-size: 30px;
     font-family: 'Roboto', sans-serif;
-    color: #6cc6ab;
+    color: #35b18c;
     padding: 5px;
 }
 
@@ -94,6 +94,8 @@ button {
     margin: 10px 0px 10px 0px;
     width: 100%;
     padding: 5px 0px 5px 0px;
+    position: relative;
+    top: 20px;
 }
 
 .cb {
@@ -107,7 +109,46 @@ button {
     width: 115px;
     margin: 0px;
     position: relative;
-    bottom: 20px;
+    bottom: 25px;
     left: 30px;
+    padding: 5px;
+    border: #eef5f3 solid 1px;
+    background-color: #eef5f3;
+    border-radius: 10px;
+}
+
+
+
+output {
+    position: relative;
+    top: 60px;
+    right: 89.5px;
+    background: #eef5f3;
+    padding: 3px;
+    border-radius: 25px;
+}
+
+
+#fader {
+    position: relative;
+    top: 35px;
+    right: -48px;
+    height: 10px;
+    background: #eef5f3;
+    -webkit-appearance: none;
+    outline: none;
+    border-radius: 15px;
+}
+
+#fader::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 20px;
+
+    border-radius: 15px;
+    background: #35b18c;
+    
 
 }
+
+
