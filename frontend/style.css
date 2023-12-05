@@ -25,6 +25,16 @@ button {
     
 }
 
+.top button span {
+    position: relative;
+    bottom: 7.5px;
+}
+
+.pass svg {
+    position: relative;
+    left: 45px;
+}
+
 .bot { 
     grid-area: bot;
 }
@@ -33,7 +43,10 @@ button {
     flex-shrink: 4;
     height: 40px;
     text-align: center;
-
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    color: #6cc6ab;
+    padding: 5px;
 }
 
 .shuffle {
@@ -52,7 +65,49 @@ button {
 
 .svg_copy {
     justify-self: end;
+    position: relative;
     width: 32px;
     height: 32px;
 }
 
+
+.bot {
+    display: grid;
+    grid-template-areas: 
+                        "chek_box len_dlina"
+                       
+    ;
+}
+
+.top_cb {
+
+}
+
+.chek_box {
+    grid-area: chek_box;
+}
+.len_dlina {
+    grid-area: len_dlina;
+}
+
+.chek_box {
+    margin: 10px 0px 10px 0px;
+    width: 100%;
+    padding: 5px 0px 5px 0px;
+}
+
+.cb {
+    display: inline;
+    
+    
+
+}
+
+.cb p {
+    width: 115px;
+    margin: 0px;
+    position: relative;
+    bottom: 20px;
+    left: 30px;
+
+}
