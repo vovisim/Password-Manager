@@ -22,9 +22,11 @@
                 <p>Точка</p>
             </div>
         </div>
-        <div class="len_dlina">
-            <input type="range" min="8" max="16" id="fader" value="8" step="1" oninput="outputUpdate(value)">
-            <output for="fader" id="volume">8</output>
+        <div class="container">
+	        <div class="slider">
+		        <output for="fader" id="volume">0</output>
+		        <input type="range" id="fader" min="8" max="16" value="8" step="1" oninput="outputUpdate(value)">
+	        </div></div>
         </div>
     </div>
 
@@ -37,7 +39,8 @@
         function outputUpdate(vol) {
             var output = document.querySelector('#volume');
             output.value = vol;
-            output.style.left = vol - 20 + "px";
+            output.style.left = (vol * 12)-97 + "%";
+           
         }
 
 

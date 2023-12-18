@@ -117,38 +117,58 @@ button {
     border-radius: 10px;
 }
 
-
-
-output {
-    position: relative;
-    top: 60px;
-    right: 89.5px;
-    background: #eef5f3;
-    padding: 3px;
-    border-radius: 25px;
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
 }
 
+.slider {
+	position: relative;
+
+	border-radius: 8px;
+	width: 310px;
+	height: 18px;
+    left: 0;
+}
+
+output {
+	position: absolute;
+	
+	top: -50px;
+	padding: 7px 10px;
+	background: 	#eef5f3;
+	color: #35b18c;
+	border-radius: 15px;
+	font-weight: bold;
+    
+}
 
 #fader {
-    position: relative;
-    top: 35px;
-    right: -48px;
-    height: 10px;
-    background: #eef5f3;
-    -webkit-appearance: none;
-    outline: none;
-    border-radius: 15px;
+	left: 320px;
+	width: 300px;
+	height: 10px;
+	background: #eef5f3;
+	-webkit-appearance: none;
+	outline: none;
+	border-radius: 4px;
+    
 }
 
 #fader::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 10px;
-    height: 20px;
+	-webkit-appearance: none;
+	width: 17px;
+	height: 38px;
+	border-radius: 20px;
+	background: #35b18c;
+	box-shadow: 0 0 2px #222;
+}
 
-    border-radius: 15px;
-    background: #35b18c;
-    
-
+.c{
+	display: flex;
 }
 
 
