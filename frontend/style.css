@@ -11,6 +11,7 @@ body {
                         "bot"
     ;
     margin: 20px;
+    
 }
 button {
        background-color: #eef5f3;
@@ -47,6 +48,19 @@ button {
     font-family: 'Roboto', sans-serif;
     color: #35b18c;
     padding: 5px;
+    transition: 300ms;
+}
+
+.pass:hover{
+  color: #eef5f3;
+  background-color: #45d1b3;
+  transition: 300ms;
+}
+
+.pass:active{
+  background-color: #45d1b3;
+  color: #c8ece1;
+  transition: 100ms;
 }
 
 .shuffle {
