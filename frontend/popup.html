@@ -19,18 +19,18 @@
                     <label class="cbx" for="cbx-46"><span>
                       <svg width="12px" height="10px" viewbox="0 0 12 10">
                         <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                      </svg></span><span>Спец.Символы</span>
+                      </svg></span><span class="cb_text">Спец.Символы</span>
                     </label>
                   </div>
             </div>
             <div class="bot_cb cb">
                 <div class="top_cb cb">
-                    <div class="checkbox-wrapper-46">
-                        <input class="inp-cbx" id="cbx-46" type="checkbox" />
-                        <label class="cbx" for="cbx-46"><span>
+                    <div class="checkbox-wrapper-45">
+                        <input class="inp-cbx" id="cbx-45" type="checkbox" />
+                        <label class="cbx" for="cbx-45"><span>
                           <svg width="12px" height="10px" viewbox="0 0 12 10">
                             <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                          </svg></span><span>Точка</span>
+                          </svg></span><span class="cb_text">Точка</span>
                         </label>
                       </div>
                 </div>
@@ -38,7 +38,7 @@
         </div>
         <div class="container">
 	        <div class="slider">
-		        <output for="fader" id="volume">0</output>
+		        <output for="fader" id="volume">8</output>
 		        <input type="range" id="fader" min="8" max="16" value="8" step="1" oninput="outputUpdate(value)">
 	        </div></div>
         </div>
@@ -55,7 +55,7 @@
             output.value = vol;
             output.style.left = (vol * 12)-98 + "%";
             if(output.value > 9) {
-				output.style.left = (vol * 11.7)-98 + "%";
+				output.style.left = (vol * 11.99)-98 + "%";
 			}
         }
 
