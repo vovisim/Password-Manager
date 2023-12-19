@@ -14,12 +14,26 @@
     <div class="bot">
         <div class="chek_box">
             <div class="top_cb cb">
-                <input type="checkbox">
-                <p>Спец.Символы</p>
+                <div class="checkbox-wrapper-46">
+                    <input class="inp-cbx" id="cbx-46" type="checkbox" />
+                    <label class="cbx" for="cbx-46"><span>
+                      <svg width="12px" height="10px" viewbox="0 0 12 10">
+                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                      </svg></span><span>Спец.Символы</span>
+                    </label>
+                  </div>
             </div>
             <div class="bot_cb cb">
-                <input type="checkbox">
-                <p>Точка</p>
+                <div class="top_cb cb">
+                    <div class="checkbox-wrapper-46">
+                        <input class="inp-cbx" id="cbx-46" type="checkbox" />
+                        <label class="cbx" for="cbx-46"><span>
+                          <svg width="12px" height="10px" viewbox="0 0 12 10">
+                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                          </svg></span><span>Точка</span>
+                        </label>
+                      </div>
+                </div>
             </div>
         </div>
         <div class="container">
@@ -39,8 +53,10 @@
         function outputUpdate(vol) {
             var output = document.querySelector('#volume');
             output.value = vol;
-            output.style.left = (vol * 12)-97 + "%";
-           
+            output.style.left = (vol * 12)-98 + "%";
+            if(output.value > 9) {
+				output.style.left = (vol * 11.7)-98 + "%";
+			}
         }
 
 
